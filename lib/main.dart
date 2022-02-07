@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/fittedBox.dart';
 import 'package:flutter_widget/stepper.dart';
 
 void main() {
@@ -6,6 +7,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  // ignore: prefer_const_constructors_in_immutables
   MyApp({Key? key}) : super(key: key);
 
   @override
@@ -20,11 +22,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: PageView(
           controller: _controller,
           children: [
             Stepper_widget(),
+            FittedBoxWidget(),
           ],
         ),
       ),
